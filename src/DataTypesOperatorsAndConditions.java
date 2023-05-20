@@ -1,4 +1,4 @@
-public class Main {
+public class DataTypesOperatorsAndConditions {
     public static void main(String[] args) {
 
 
@@ -52,8 +52,8 @@ public class Main {
 
         System.out.println("module: " + (10 % 4));
 
-        System.out.println(7 % 2);
-        System.out.println(42 % 2);
+        System.out.println(7 % 2); // 1 so odd
+        System.out.println(42 % 2); // 0 even
 
         boolean isBigger = 5 > 3;
         System.out.println(isBigger);
@@ -64,12 +64,16 @@ public class Main {
         int x = 42;
         System.out.println(x);
         x++; // x = x + 1;
-        System.out.println(x);
+        System
+                .out
+                .println(x);
         x--;
         System.out.println(x);
-        x+=5; //47!
+        x+=5; //47! x = x + 5;
         System.out.println(x);
 
+
+//        conditionals
         int statusCode = 42;
 
         if (statusCode == 200) {
@@ -82,10 +86,12 @@ public class Main {
 
         String coffeeToPrepare = "Espresso";
 
-        if (coffeeToPrepare.equals("Espresso")) {
+        if (!coffeeToPrepare.equals("Espresso")) {
             System.out.println("Please, prepare 1 espresso!");
         } else if (coffeeToPrepare.equals("FlatWhite")) {
             System.out.println("Please, prepare 2 espresso!");
+        } else {
+            System.out.println("prepare a tea :(");
         }
 
 
@@ -109,7 +115,9 @@ public class Main {
             }
             default -> System.out.println("Nothing special");
         }
-        int result = 5 > 10 ? 1 : 0; // ternary operator
+        int result = !(5 > 10) ? 1 : 0; // ternary operator : condition ? true : false;
+//        5 > 10 is five bigger than 10?
+//        !(5>10) is not five bigger than 10?
         System.out.println(result);
 
     }
